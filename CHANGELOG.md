@@ -42,6 +42,7 @@ remote_component = { name = "espressif/lan87xx", version = "1.*" }
   ```
 - Compatibility with ESP-IDF V6.0, and some pre-release 6.0.x.
 - Added support for the Generic Ethernet PHY driver: particularly useful on ESP-IDF 6.0+ as it is built-in.
+- MQTT: [`EspMqttEvent::raw`] accessor returning the underlying `esp_mqtt_event_t`, exposing fields not surfaced by [`EspMqttEvent::payload`] (e.g. `error_handle`).
 
 ## [0.52.1] - 2026-03-10
 

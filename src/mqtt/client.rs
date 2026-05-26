@@ -1096,6 +1096,10 @@ impl<'a> EspMqttEvent<'a> {
         Self(event)
     }
 
+    pub fn raw(&self) -> &'a esp_mqtt_event_t {
+        self.0
+    }
+
     #[allow(non_upper_case_globals, non_snake_case)]
     pub fn payload(&self) -> EventPayload<'_, EspError> {
         match self.0.event_id {
